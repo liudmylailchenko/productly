@@ -8,10 +8,11 @@ import Container from './Container';
 
 const Wrapper = styled.header`
   padding: 25px 0;
+  position: relative;
+  border-bottom: 1px solid #bcd0e5;
 
-  @media screen and (max-width: 800px) {
-    position: relative;
-    border-bottom: 1px solid #bcd0e5;
+  @media screen and (min-width: 800px) {
+    border-bottom: 0;
   }
 `;
 
@@ -25,52 +26,61 @@ const LogoWraper = styled.div`
 `;
 
 const Menu = styled.div`
-  display: flex;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #bcd0e5;
 
-  @media screen and (max-width: 800px) {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid #bcd0e5;
+  &.active {
+    display: flex;
+  }
 
-    &.active {
-      display: flex;
-    }
+  @media screen and (min-width: 800px) {
+    display: flex;
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    border: 0;
   }
 `;
 
 const MenuButton = styled.button`
-  display: none;
+  display: block;
+  background: none;
+  border: 0;
+  outline: none;
 
-  @media screen and (max-width: 800px) {
-    display: block;
-    background: none;
-    border: none;
-    outline: none;
+  &:hover {
+    cursor: pointer;
+  }
 
-    :hover {
-      cursor: pointer;
-    }
-
-    img {
-      width: 25px;
-      height: 25px;
-    }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  @media screen and (min-width: 800px) {
+    display: none;
   }
 `;
 
 const ButtonsWrapper = styled.div`
+  padding: 10px;
+
   button {
-    margin-left: 14px;
+    margin: 0 7px;
   }
 
-  @media screen and (max-width: 800px) {
-    padding: 10px;
+  @media screen and (min-width: 800px) {
+    padding: 0;
+
+    button {
+      margin: 0 0 0 14px;
+    }
   }
 `;
 
@@ -80,16 +90,17 @@ const Navigation = styled.button`
   width: auto;
   height: auto;
   background: none;
-  border: none;
+  border: 0;
   outline: none;
+  padding: 10px;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     text-decoration: underline;
   }
 
-  @media screen and (max-width: 800px) {
-    padding: 10px;
+  @media screen and (min-width: 800px) {
+    padding: 0 7px;
   }
 `;
 
@@ -100,9 +111,8 @@ class Header extends React.Component {
 
   handleClick = () => {
     const { activeMenu } = this.state;
-    const changeActiveMenu = activeMenu === false ? true : false;
     this.setState({
-      activeMenu: changeActiveMenu,
+      activeMenu: !activeMenu,
     });
   };
 
@@ -114,7 +124,7 @@ class Header extends React.Component {
           <LogoWraper>
             <img src={logo} alt="" />
           </LogoWraper>
-          <Menu className={activeMenu === true ? 'active' : ''}>
+          <Menu className={activeMenu ? 'active' : ''}>
             <Navigation>Product</Navigation>
             <Navigation>Customers</Navigation>
             <Navigation>Pricng</Navigation>
@@ -130,7 +140,7 @@ class Header extends React.Component {
             </ButtonsWrapper>
           </Menu>
           <MenuButton onClick={this.handleClick}>
-            <img src={activeMenu === false ? menu : times} alt="" />
+            <img src={!activeMenu ? menu : times} alt="" />
           </MenuButton>
         </ContainerStyled>
       </Wrapper>
