@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H3, TextSm } from './Typography';
 
 const Wrapper = styled.div`

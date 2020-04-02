@@ -1,18 +1,26 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2, TextSm } from './Typography';
 import Section from './Section';
 import image from '../images/productmanagers.svg';
 import check from '../images/check.svg';
+import Container from './Container';
 
 const Wrapper = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
+  }
 `;
 
-const Container = styled.div`
-  max-width: 1130px;
-  margin: 0 auto;
+const ContainerStyled = styled(Container)`
   display: flex;
+  align-items: center;
 `;
 
 const CheckItem = styled.div`
@@ -27,7 +35,7 @@ const CheckItem = styled.div`
 function SectionProductManagers() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <Section reverse image={image}>
           <TextSm>Easier decision making for</TextSm>
           <H2>Product Managers</H2>
@@ -53,7 +61,7 @@ function SectionProductManagers() {
             </TextSm>
           </CheckItem>
         </Section>
-      </Container>
+      </ContainerStyled>
     </Wrapper>
   );
 }

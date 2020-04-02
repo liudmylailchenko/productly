@@ -1,27 +1,35 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2, H6, TextSm } from './Typography';
 import Section from './Section';
 import image from '../images/marketers.svg';
+import Container from './Container';
 
 const Wrapper = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
+  }
 
   h6 {
     margin: 25px 0 12px 0;
   }
 `;
 
-const Container = styled.div`
-  max-width: 1130px;
-  margin: 0 auto;
+const ContainerStyled = styled(Container)`
   display: flex;
+  align-items: center;
 `;
 
 function SectionMarketers() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <Section image={image}>
           <TextSm>Optimisation for</TextSm>
           <H2>Marketers</H2>
@@ -46,7 +54,7 @@ function SectionMarketers() {
             cost you more money.
           </TextSm>
         </Section>
-      </Container>
+      </ContainerStyled>
     </Wrapper>
   );
 }

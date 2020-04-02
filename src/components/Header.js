@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import logo from '../images/Logo.svg';
 import menu from '../images/align-justify-solid.svg';
 import times from '../images/times-solid.svg';

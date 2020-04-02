@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2, TextSm } from './Typography';
 import Card from './Card';
 import cardimage1 from '../images/cardimage1.svg';
