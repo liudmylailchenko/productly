@@ -34,7 +34,9 @@ const Menu = styled.div`
   padding: 10px;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid #bcd0e5;
   border-bottom: 1px solid #bcd0e5;
+  background: white;
 
   &.active {
     display: flex;

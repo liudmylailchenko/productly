@@ -6,16 +6,6 @@ import image from '../images/designprofessionals.svg';
 import Container from './Container';
 
 const Wrapper = styled.div`
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 450px) {
-    margin-bottom: 60px;
-  }
-
-  @media screen and (min-width: 850px) {
-    margin-bottom: 100px;
-  }
-
   h6 {
     margin: 25px 0 12px 0;
   }

@@ -6,17 +6,7 @@ import image from '../images/productmanagers.svg';
 import check from '../images/check.svg';
 import Container from './Container';
 
-const Wrapper = styled.div`
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 450px) {
-    margin-bottom: 60px;
-  }
-
-  @media screen and (min-width: 850px) {
-    margin-bottom: 100px;
-  }
-`;
+const Wrapper = styled.div``;
 
 const ContainerStyled = styled(Container)`
   display: flex;

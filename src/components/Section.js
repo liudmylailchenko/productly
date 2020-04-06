@@ -5,10 +5,18 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 0 -20px;
+  margin: 0 -20px 30px;
+
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
 
   @media screen and (min-width: 660px) {
     flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
   }
 `;
 
