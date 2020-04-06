@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import logo from '../images/Logo.svg';
 import menu from '../images/align-justify-solid.svg';
 import times from '../images/times-solid.svg';
@@ -34,7 +34,9 @@ const Menu = styled.div`
   padding: 10px;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid #bcd0e5;
   border-bottom: 1px solid #bcd0e5;
+  background: white;
 
   &.active {
     display: flex;
