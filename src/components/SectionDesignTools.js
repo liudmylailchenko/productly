@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2 } from './Typography';
 import Tool from './Tool';
 import background from '../images/background1.svg';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2, TextSm } from './Typography';
 import background from '../images/background2.svg';
 import bg from '../images/avator.svg';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H5, TextSm } from './Typography';
 import logo from '../images/Logo.svg';
 import Button from './Button';

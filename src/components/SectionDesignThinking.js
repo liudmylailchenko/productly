@@ -1,23 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H1, Text } from './Typography';
 import Button from './Button';
 import image from '../images/designthinking.svg';
 import Section from './Section';
 import triangle from '../images/triangle.svg';
+import Container from './Container';
 
-const Wrapper = styled.div`
-  margin-bottom: 110px;
-`;
+const Wrapper = styled.div``;
 
-const Container = styled.div`
-  max-width: 1130px;
-  margin: 0 auto;
+const ContainerStyled = styled(Container)`
   display: flex;
+  align-items: center;
 `;
 
 const SectionText = styled(Text)`
   margin: 45px 0;
+`;
+
+const ButtonsContainer = styled.div`
+  text-align: center;
 `;
 
 const ButtonVideo = styled.button`
@@ -34,7 +36,7 @@ const ButtonVideo = styled.button`
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  margin-left: 30px;
+  margin: 10px 30px;
   cursor: pointer;
 
   img {
@@ -45,22 +47,24 @@ const ButtonVideo = styled.button`
 function DesignThinking() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <Section image={image}>
           <H1>The Design Thinking superpowers</H1>
           <SectionText>
             Tools, tutorials, design and innovation experts, all in one place!
             The most intuitive way to imagine your next user experience.
           </SectionText>
-          <Button variant="primary" size="lg">
-            Get started
-          </Button>
-          <ButtonVideo>
-            <img src={triangle} alt="" />
-            Watch the Video
-          </ButtonVideo>
+          <ButtonsContainer>
+            <Button variant="primary" size="lg">
+              Get started
+            </Button>
+            <ButtonVideo>
+              <img src={triangle} alt="" />
+              Watch the Video
+            </ButtonVideo>
+          </ButtonsContainer>
         </Section>
-      </Container>
+      </ContainerStyled>
     </Wrapper>
   );
 }
