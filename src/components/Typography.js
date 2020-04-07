@@ -25,6 +25,7 @@ export const H4 = styled(HeadingBase).attrs({ as: 'h4' })`
   font-size: 1.375rem;
   line-height: 2.063rem;
   font-weight: 600;
+  margin: 0;
 `;
 
 export const H5 = styled(HeadingBase).attrs({ as: 'h5' })`
