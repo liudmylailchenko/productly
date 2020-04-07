@@ -34,19 +34,19 @@ const ContainerStyled = styled(Container)`
   }
 `;
 
-const NewH2 = styled(H2)`
+const Heading = styled(H2)`
   text-align: center;
 `;
 
 const ToolsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 14px -20px 0 -20px;
+  margin: 14px -20px 0;
   padding-bottom: 34px;
 
   @media screen and (min-width: 660px) {
     flex-direction: row;
-    margin: 54px -20px 0 -20px;
+    margin: 54px -20px 0;
   }
 `;
 
@@ -54,10 +54,10 @@ function SectionDesignTools() {
   return (
     <Wrapper>
       <ContainerStyled>
-        <NewH2>
+        <Heading>
           We design tool to unveil
           <br /> your superpowers
-        </NewH2>
+        </Heading>
         <ToolsContainer>
           <Tool
             image={arrow}
