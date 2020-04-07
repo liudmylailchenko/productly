@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <SectionDesignThinking />
-      {/* <SectionDesignTools /> */}
+      <SectionDesignTools />
       <SectionDesignProfessionals />
       <SectionProductManagers />
       <SectionMarketers />

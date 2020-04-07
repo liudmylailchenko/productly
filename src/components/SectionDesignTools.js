@@ -8,19 +8,30 @@ import clock from '../images/clock.svg';
 import icon from '../images/icon.svg';
 import heart from '../images/heart.svg';
 import Button from './Button';
+import Container from './Container';
 
 const Wrapper = styled.div`
   background: url(${background}) no-repeat center bottom;
-  margin-bottom: 110px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
+  }
 `;
 
-const Container = styled.div`
+const ContainerStyled = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1130px;
-  margin: 0 auto;
-  padding-bottom: 90px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 660px) {
+    padding-bottom: 90px;
+  }
 `;
 
 const NewH2 = styled(H2)`
@@ -29,14 +40,20 @@ const NewH2 = styled(H2)`
 
 const ToolsContainer = styled.div`
   display: flex;
-  margin: 54px -20px 0 -20px;
+  flex-direction: column;
+  margin: 14px -20px 0 -20px;
   padding-bottom: 34px;
+
+  @media screen and (min-width: 660px) {
+    flex-direction: row;
+    margin: 54px -20px 0 -20px;
+  }
 `;
 
 function SectionDesignTools() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <NewH2>
           We design tool to unveil
           <br /> your superpowers
@@ -66,7 +83,7 @@ function SectionDesignTools() {
         <Button variant="primary" size="lg">
           SIGN UP NOW
         </Button>
-      </Container>
+      </ContainerStyled>
     </Wrapper>
   );
 }
