@@ -18,7 +18,7 @@ function App() {
       <SectionDesignProfessionals />
       <SectionProductManagers />
       <SectionMarketers />
-      {/* <SectionSuperHero /> */}
+      <SectionSuperHero />
       <SectionMarketingStrategies />
       {/* <Footer /> */}
     </div>
