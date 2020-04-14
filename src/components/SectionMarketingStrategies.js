@@ -6,7 +6,7 @@ import cardimage1 from '../images/cardimage1.svg';
 import cardimage2 from '../images/cardimage2.svg';
 import cardimage3 from '../images/cardimage3.svg';
 import Slider from './Slider';
-
+import Container from './Container';
 const Wrapper = styled.div`
   margin-bottom: 120px;
 
@@ -17,11 +17,6 @@ const Wrapper = styled.div`
   p {
     font-weight: normal;
   }
-`;
-
-const Container = styled.div`
-  max-width: 1107px;
-  margin: 0 auto;
 `;
 
 function SectionMarketingStrategies() {
@@ -61,6 +56,34 @@ function SectionMarketingStrategies() {
             author="Abdullah"
             date="03 March 2019"
             text="Success Steps For Your Personal Or Business Life"
+          ></Card>
+          <Card
+            link="#"
+            image={cardimage1}
+            author="Abdullah"
+            date="03 March 2019"
+            text="Increasing Prosperity With Positive Thinking"
+          ></Card>
+          <Card
+            link="#"
+            image={cardimage2}
+            author="Abdullah"
+            date="03 March 2019"
+            text="Motivation Is The First Step To Success"
+          ></Card>
+          <Card
+            link="#"
+            image={cardimage2}
+            author="Abdullah"
+            date="03 March 2019"
+            text="Motivation Is The First Step To Success"
+          ></Card>
+          <Card
+            link="#"
+            image={cardimage2}
+            author="Abdullah"
+            date="03 March 2019"
+            text="Motivation Is The First Step To Success"
           ></Card>
         </Slider>
       </Container>

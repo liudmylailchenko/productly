@@ -18,8 +18,8 @@ function App() {
       <SectionDesignProfessionals />
       <SectionProductManagers />
       <SectionMarketers />
-      {/* <SectionSuperHero />
-      <SectionMarketingStrategies /> */}
+      {/* <SectionSuperHero /> */}
+      <SectionMarketingStrategies />
       {/* <Footer /> */}
     </div>
   );

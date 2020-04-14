@@ -3,9 +3,9 @@ import styled from 'styled-components/macro';
 import { H3, TextSm } from './Typography';
 
 const Wrapper = styled.div`
-  flex: 0 0 33.333%;
+  flex: 0 0 100%;
   padding: 0 16px;
-
+  text-align: center;
   h3 {
     :hover {
       color: #ff9900;
@@ -14,6 +14,18 @@ const Wrapper = styled.div`
 
   a {
     text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: 500px) {
+    flex: 0 0 50%;
+  }
+
+  @media screen and (min-width: 770px) {
+    flex: 0 0 33.333%;
   }
 `;
 
