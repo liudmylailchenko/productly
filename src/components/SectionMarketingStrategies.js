@@ -8,7 +8,15 @@ import cardimage3 from '../images/cardimage3.svg';
 import Slider from './Slider';
 import Container from './Container';
 const Wrapper = styled.div`
-  margin-bottom: 120px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
+  }
 
   h2 {
     margin: 0 0 10px 0;

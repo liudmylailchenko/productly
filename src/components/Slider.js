@@ -74,9 +74,12 @@ class Slider extends React.Component {
       slidesToShow = 2;
     }
 
-    this.setState({
-      slidesToShow,
-    });
+    if (this.state.slidesToShow !== slidesToShow) {
+      this.setState({
+        slidesToShow,
+        activeSlide: 0,
+      });
+    }
   };
 
   componentDidMount() {
