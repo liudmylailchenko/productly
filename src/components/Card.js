@@ -3,17 +3,30 @@ import styled from 'styled-components/macro';
 import { H3, TextSm } from './Typography';
 
 const Wrapper = styled.div`
-  flex: 0 0 33.333%;
+  flex: 0 0 100%;
   padding: 0 16px;
+  text-align: center;
+
+  @media screen and (min-width: 500px) {
+    flex: 0 0 50%;
+  }
+
+  @media screen and (min-width: 770px) {
+    flex: 0 0 33.333%;
+  }
 
   h3 {
-    :hover {
+    &:hover {
       color: #ff9900;
     }
   }
 
   a {
     text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
   }
 `;
 

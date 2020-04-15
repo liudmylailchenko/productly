@@ -17,6 +17,14 @@ const Wrapper = styled.div`
   padding-top: 70px;
   margin-bottom: 30px;
 
+  @media screen and (min-width: 450px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: 100px;
+  }
+
   @media screen and (min-width: 1050px) {
     padding-top: 0;
   }
@@ -27,7 +35,7 @@ const ContainerStyled = styled(Container)`
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 680px;
+  min-height: 750px;
   flex-direction: column;
 `;
 
