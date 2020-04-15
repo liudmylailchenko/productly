@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/productly/static/css/main.439af788.chunk.css",
-    "main.js": "/productly/static/js/main.e25a7732.chunk.js",
-    "main.js.map": "/productly/static/js/main.e25a7732.chunk.js.map",
+    "main.js": "/productly/static/js/main.2f770cf1.chunk.js",
+    "main.js.map": "/productly/static/js/main.2f770cf1.chunk.js.map",
     "runtime-main.js": "/productly/static/js/runtime-main.ae7f0b5c.js",
     "runtime-main.js.map": "/productly/static/js/runtime-main.ae7f0b5c.js.map",
     "static/css/2.764ccc25.chunk.css": "/productly/static/css/2.764ccc25.chunk.css",
     "static/js/2.ee0c29a6.chunk.js": "/productly/static/js/2.ee0c29a6.chunk.js",
     "static/js/2.ee0c29a6.chunk.js.map": "/productly/static/js/2.ee0c29a6.chunk.js.map",
     "index.html": "/productly/index.html",
-    "precache-manifest.92ea96edda2733be6648e88fe26fb7ed.js": "/productly/precache-manifest.92ea96edda2733be6648e88fe26fb7ed.js",
+    "precache-manifest.c0bbaee8114483b75fde8fbda1bf6453.js": "/productly/precache-manifest.c0bbaee8114483b75fde8fbda1bf6453.js",
     "service-worker.js": "/productly/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/productly/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.439af788.chunk.css.map": "/productly/static/css/main.439af788.chunk.css.map",
@@ -43,6 +43,6 @@
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.ee0c29a6.chunk.js",
     "static/css/main.439af788.chunk.css",
-    "static/js/main.e25a7732.chunk.js"
+    "static/js/main.2f770cf1.chunk.js"
   ]
 }
