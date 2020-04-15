@@ -20,7 +20,7 @@ function App() {
       <SectionMarketers />
       <SectionSuperHero />
       <SectionMarketingStrategies />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
