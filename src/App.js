@@ -19,7 +19,7 @@ function App() {
       <SectionProductManagers />
       <SectionMarketers />
       <SectionSuperHero />
-      {/* <SectionMarketingStrategies /> */}
+      <SectionMarketingStrategies />
       {/* <Footer /> */}
     </div>
   );
