@@ -1,36 +1,82 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H5, TextSm } from './Typography';
 import logo from '../images/Logo.svg';
 import Button from './Button';
+import Container from './Container';
 
 const Wrapper = styled.div`
   h5 {
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 850px) {
+      margin-bottom: 30px;
+    }
   }
 
   p {
     font-weight: normal;
     line-height: 35px;
   }
+
+  img {
+    margin: 0 40px 30px 10px;
+  }
 `;
 
-const Container = styled.div`
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 102px 0 95px;
+const ContainerStyled = styled(Container)`
+  padding: 50px 20px 55px;
   border-top: 1px solid rgba(188, 208, 229, 0.496913);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 850px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 900px) {
+    padding: 90px 20px 95px;
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+  }
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100%;
+
+  @media screen and (min-width: 640px) {
+    width: auto;
+  }
 `;
 
 const Links = styled.div`
-  margin-left: 127px;
+  margin: 0 0 20px;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const SignUp = styled.div`
-  margin-left: 82px;
   max-width: 325px;
 
   input {
@@ -51,30 +97,51 @@ const SignUp = styled.div`
 function Footer() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <img src={logo} alt="" />
-        <Links>
-          <H5>Quick Links</H5>
-          <TextSm>About us</TextSm>
-          <TextSm>Blog</TextSm>
-          <TextSm>Contact</TextSm>
-          <TextSm>FAQ</TextSm>
-        </Links>
-        <Links>
-          <H5>Legal Stuff</H5>
-          <TextSm>Disclaimer</TextSm>
-          <TextSm>Finansing</TextSm>
-          <TextSm>Privacy Policy</TextSm>
-          <TextSm>Terms of Service</TextSm>
-        </Links>
-        <SignUp>
-          <H5>Knowing you're always on the best energy deal. </H5>
-          <input placeholder="Enter your phone Number"></input>
-          <Button variant="primary" size="sm">
-            Sign up Now
-          </Button>
-        </SignUp>
-      </Container>
+        <Content>
+          <LinksContainer>
+            <Links>
+              <H5>Quick Links</H5>
+              <a href="#">
+                <TextSm>About us</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>Blog</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>Contact</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>FAQ</TextSm>
+              </a>
+            </Links>
+
+            <Links>
+              <H5>Legal Stuff</H5>
+              <a href="#">
+                <TextSm>Disclaimer</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>Finansing</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>Privacy Policy</TextSm>
+              </a>
+              <a href="#">
+                <TextSm>Terms of Service</TextSm>
+              </a>
+            </Links>
+          </LinksContainer>
+          <SignUp>
+            <H5>Knowing you're always on the best energy deal. </H5>
+            <input placeholder="Enter your phone Number"></input>
+            <Button variant="primary" size="sm">
+              Sign up Now
+            </Button>
+          </SignUp>
+        </Content>
+      </ContainerStyled>
     </Wrapper>
   );
 }

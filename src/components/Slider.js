@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const Wrapper = styled.div``;
 
@@ -34,6 +34,7 @@ const SwitchContainer = styled.div`
 class Slider extends React.Component {
   state = {
     activeSlide: 0,
+    slidesToShow: 1,
   };
 
   handleClick = i => {
@@ -44,8 +45,9 @@ class Slider extends React.Component {
 
   renderSwitches() {
     const { children } = this.props;
-    const { activeSlide } = this.state;
-    const slidesCount = Math.ceil(children.length / 3);
+    const { slidesToShow, activeSlide } = this.state;
+    const slidesCount = Math.ceil(children.length / slidesToShow);
+
     const switches = [];
 
     for (let i = 0; i < slidesCount; i++) {
@@ -61,10 +63,42 @@ class Slider extends React.Component {
     return switches;
   }
 
+  handleResize = () => {
+    const windowWidth = window.innerWidth;
+
+    let slidesToShow = 3;
+
+    if (windowWidth < 500) {
+      slidesToShow = 1;
+    } else if (windowWidth < 770) {
+      slidesToShow = 2;
+    }
+
+    if (this.state.slidesToShow !== slidesToShow) {
+      this.setState({
+        slidesToShow,
+        activeSlide: 0,
+      });
+    }
+  };
+
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
   render() {
     const { children } = this.props;
-    const { activeSlide } = this.state;
-    const itemsToShow = children.slice(activeSlide * 3, activeSlide * 3 + 3);
+    const { activeSlide, slidesToShow } = this.state;
+
+    const itemsToShow = children.slice(
+      activeSlide * slidesToShow,
+      activeSlide * slidesToShow + slidesToShow
+    );
 
     return (
       <Wrapper>

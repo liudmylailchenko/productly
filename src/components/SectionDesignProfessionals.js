@@ -1,27 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { H2, H6, TextSm } from './Typography';
 import Section from './Section';
 import image from '../images/designprofessionals.svg';
+import Container from './Container';
 
 const Wrapper = styled.div`
-  margin-bottom: 100px;
-
   h6 {
     margin: 25px 0 12px 0;
   }
 `;
 
-const Container = styled.div`
-  max-width: 1130px;
-  margin: 0 auto;
+const ContainerStyled = styled(Container)`
   display: flex;
+  align-items: center;
 `;
 
 function SectionDesignProfessionals() {
   return (
     <Wrapper>
-      <Container>
+      <ContainerStyled>
         <Section image={image}>
           <TextSm>Effortless Validation for</TextSm>
           <H2>Design Professionals</H2>
@@ -45,7 +43,7 @@ function SectionDesignProfessionals() {
             cost you more money,{' '}
           </TextSm>
         </Section>
-      </Container>
+      </ContainerStyled>
     </Wrapper>
   );
 }
