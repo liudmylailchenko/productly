@@ -103,32 +103,32 @@ function Footer() {
           <LinksContainer>
             <Links>
               <H5>Quick Links</H5>
-              <a href="#">
+              <a href="/">
                 <TextSm>About us</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>Blog</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>Contact</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>FAQ</TextSm>
               </a>
             </Links>
 
             <Links>
               <H5>Legal Stuff</H5>
-              <a href="#">
+              <a href="/">
                 <TextSm>Disclaimer</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>Finansing</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>Privacy Policy</TextSm>
               </a>
-              <a href="#">
+              <a href="/">
                 <TextSm>Terms of Service</TextSm>
               </a>
             </Links>
